@@ -1,0 +1,57 @@
+        #container{
+          /* 여기서는 div들의 가장 큰 틀*/
+          width: 650px;
+          /*바깥여백 : 0 auto:브라우저에게 맡김 */
+          margin: 0 auto;
+          padding: 20px;
+        }
+        img{
+          width: 200px; 
+          height: 200px;
+        }
+        table, th, td{
+          border: 1px solid gray;
+        }
+        #red img{
+          /* #이 지정한 아이디를 잡아주는 것 */
+          float:left;
+          /* height:250px; */
+          margin: 22px 30px 0 30px;
+
+        }
+        #red{
+          border:1px solid gray;
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+          margin-bottom: 10px;
+          
+          }
+      
+        #salad{
+          border: 1px solid gray;
+          text-align: left;
+          padding:10px;
+          margin-bottom: 10px;
+        }
+        #salad img{
+          width:170px;
+          height:140px;
+          float:right;
+        }
+        #movie{
+
+        }
+        #jun{
+          border:1px solid gray;
+          margin-top: 5px;
+          padding-bottom: 10px;
+          
+
+        }
+        table{
+          margin:0 auto;
+          width:80%;
+          border-collapse: collapse;
+          
+          
+        }

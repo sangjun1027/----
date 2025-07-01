@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/폼.css">
+  <!-- css파일 따로 뺼 떄 링크 지정해줘야함 -->
+</head>
+<style>
+
+</style>
+<body>
+  <div id="conatainer">
+    <h1>폼 만들기</h1>
+    <form name="form" actrion="aaa.jsp" merhod="post">
+      <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+          <li>
+          <label for="user-id">아이디</label>
+          <input type="text" id="user-id" name="user-id" size="10" maxlength="5">
+          <!-- maxlength는 글자수 제한 -->
+          </li>
+          <li>
+          <label for="pw">비밀번호</label>
+          <input type="password" id="pw" name="pw">
+          </li>
+        </ul>
+        <!-- user아이디는 javascript를 위해 무조건 ! -->
+         <!--input에 type, id, name 반드시 넣을 것!  -->
+      </fieldset>
+      <fieldset>
+        <legend>개인정보</legend>
+        <ul>
+          <li>
+            <label for="user-name">이름<span class="redacent">*</span></label>
+            <input type="text" id="user-name" name="user-name" required>
+            <!-- required 반드시 입력해야되는 정보 -->
+          </li>
+          <li>
+            <label for="user-url">홈페이지</label>
+            <input type="url" id="user-url" name="user-url">
+            <!-- http를 체크하기에 'url'로 씀 -->
+          </li>
+          <li>
+            <label for="user-email">이메일주소</label>
+            <input id="user-email" name="user-email">
+          </li>
+          <li>
+            <label for="phone">전화번호</label>
+            <input type="tel" id="phone" name="phone" placeholder="-빼고 숫자만 입력하세요">
+          </li>
+          <li>
+            <label for="search">검색</label>
+            <input type="search" id="search" name="search" value="검색안됨" readonly>
+            <!-- readonly는 검색안됨 -->
+             <!-- value는 tag에 넣어버린 초기값 -->
+          </li>
+          <li>
+            <label for="memo">메모</label>
+            <textarea cols="40" row="5" placeholder="지원동기간략히"></textarea>
+            <!-- [textarea태그] 여러줄 입력란 만들기 -->
+          </li>
+          <li>
+          <label for="gongji">공지사항</label>
+            <textarea cols="40" row="5" readonly>
+1.다음주에 자바스크립트 수업시작
+2.태그와 css복습(이번주 주말활용)
+              </textarea>
+            </li>
+          
+        </ul>
+      </fieldset>
+      <fieldset class="label-w">
+        <legend>선택항목</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="color" value="red">
+              <span>빨강</span></label>
+            <label>
+              <input type="radio" name="color" value="green" checked>
+              <span>초록</span></label>
+            <!-- RADIO 버튼은 name 속성의 값이 반드시 같아야한다. -->
+            <label>
+              <input type="radio" name="color" value="blue">
+              <span>파랑</span></label>
+            <!-- value는 되도록 영어로 작업 -->
+          </li>
+          <li>
+            <label><input type="checkbox" name="sns" value="facebook">페이스북</label>
+            <label><input type="checkbox" name="sns" value="instar" checked>인스타</label>
+            <label><input type="checkbox" name="sns" value="x">엑스</label>
+          </li>
+          <li>
+            <label for="file">파일전송</label>
+            <input type="file" id="file" name="file">
+          </li>
+          <li>
+            <label for="color">색선택</label>
+            <input type="color" id="color" name="color">
+          </li>
+          <li>
+            <label for="select">색상선택</label>
+            <select id="select">
+              <optgroup label="차가운색">
+                <option value="blue">파란색</option>
+                <option value="gray">회색</option>
+                <option value="white">흰색</option>
+              </optgroup>
+              <optgroup label="따뜻한색"></optgroup>
+              <option value="red">빨간색</option>
+              <option value="yellow">노란색</option>
+              <option value="orange" selected>주황색</option>
+              <!-- 드롭다운 목록 만들기 -->
+            </select>
+          </li>
+          <li>
+            <label for="dlist">데이터선택</label>
+            <input type="text" id="dlist" list="sns">
+            <datalist id="sns">
+              <option value="instar">인스타</option>
+              <option value="facebook">페이스북</option>
+              <option value="x">엑스</option>
+              <!-- 제시된 리스트 값 중 선택입력 -->
+
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>숫자/날짜데이터</legend>
+        <ul>
+          <li>
+            <label for="number">스핀박스</label>
+            <input type="number" name="number" id="number" min="0" max="10" value="0" step="2">
+            <!-- 처음에 나타나는게 value -->
+          </li>
+          <li>
+            <label for="range">슬라이더</label>
+            <input type="range" id="range" name="range" min="1" max="16" step="3" value="4">
+          </li>
+          <li>
+            <label for="date">년월일</label>
+            <input type="date" id="date" name="date">
+          </li>
+          <li>
+            <label for="month">년월일</label>
+            <input type="month" id="month" name="month">
+          </li>
+          <li>
+            <label for="week">년주</label>
+            <input type="week" id="week" name="week">
+          </li>
+          <li>
+            <label for="datetime">년월일시간</label>
+            <input type="datetime-local" id="datetime" name="datetime">
+            <!-- 나라마다 시간이 다르기에 local을 넣어줌 -->
+          </li>
+          <li>
+            <label for="time">시간</label>
+            <input type="time" id="time" name="time">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <ul>
+          <li>
+           <input type="submit" value="전송버튼">
+           <input type="reset" value="취소버튼">
+           <input type="button" value="창열기" onclick="window.open()">
+           <!-- 창을 하나 열어주는 기능 -->
+          </li>
+          <li>
+            <button type="submit">전송버튼</button>
+            <button type="reset">취소버튼</button>
+            <button type="button" onclick="window.open()">창열기</button>
+            <!-- 태그 버튼 넣기 -->
+          </li>
+        </ul>
+        
+        
+        </li>
+      </fieldset>
+    </form>
+  </div>
+  
+</body>
+</html>

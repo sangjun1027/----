@@ -1,0 +1,37 @@
+
+#container{
+      width:600px;
+      margin:0 auto;
+      border: 1px solid gray;
+      padding: 20px;
+    }
+    .redacent{
+      color:#f00;
+      font-weight: bold;
+      /* 빨간 별이 있으면 required가 있다는 뜻 */
+    }
+    form ul{
+      list-style-type: none; 
+    }
+  
+    form li{
+      margin: 5px;
+      list-style: none;
+      overflow: hidden; 
+    }
+    form label{
+      width:100px;
+      /* display: inline-block; */
+      float:left;
+
+    }
+    /* /* form.label-w label{ * */
+      /* display:inline-block; */
+    input:checked + span{
+      color:blue;
+      font-weight: bold;
+    }
+    /* 체크 했을 때 돋보이게 하기 위해서 컬러, 사이즈 바꿔줌 */
+    
+    
+  

@@ -1,0 +1,25 @@
+#container{
+  width: 500px;
+  border:1px solid gray;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+legend{
+  color:blueviolet;
+}
+section{
+  padding:5px;
+}
+fieldset li{
+  list-style: none;
+}
+fieldset{
+  font-weight: bold;
+}
+label{
+  float: left;
+  width:70px;
+}
+li{
+  margin:5px;
+}

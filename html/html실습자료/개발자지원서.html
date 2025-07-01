@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개발자지원서</title>
+  <link rel="stylesheet" href="css/개발자지원서.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>프런트엔드 개발자 지원서</h1>
+      <p>HTML, CSS 자바스크립트의 기술을 이해하고 실무경험이 있는 분을 찾습니다.</p>
+    </header>
+    <HR>
+    <form action="jun" nam="sangjun" method="post">
+      <fieldset id="jun">
+        <legend>개인정보</legend>
+        <ul>
+          <li>
+            <label for="name">이름</label>
+            <input type="name" id="name" name="name" placeholder="공백 없이 입력하세요">
+          </li>
+          <li>
+            <label for="phone">연락처</label>
+            <input type="trel" id="tel" name="tel">
+          </li>  
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend for="">지원분야</legend>
+        <ul>
+          <li>
+            <label><input type="radio" name="sangjun" value="red">
+              웹 퍼블리싱</label>
+          </li>
+          <li>
+            <label><input type="radio" name="sangjun" value="green">
+              웹 어플리케이션 개발</label>
+          </li>
+          <li>
+            <!-- RADIO 버튼은 name 속성의 값이 반드시 같아야한다. -->
+            <label><input type="radio" name="color" value="blue">
+              개발 환경 개선</label>
+          </li>
+      </fieldset>
+      <fieldset>
+        <legend>지원 동기</legend>
+        <ul>
+          <li>
+            <label for="memo"></label>
+            <textarea cols="60" rows="10" placeholder="본사 지원동기를 간략히 써 주세요."></textarea>
+          </li>
+          <li>
+            <button type="submit">전송버튼</button>
+            <button type="reset">취소버튼</button>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

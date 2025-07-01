@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+  background-color: #c93030;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+nav {
+  background-color: #c93030;
+  color: white;
+  padding;
+}
+nav{
+  color:white;
+}
+nav li{
+  float:right;
+}
+footer{
+  background-color: cadetblue;
+  color: white;
+  text-align: center;
+}

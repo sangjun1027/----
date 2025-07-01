@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애완견종류</title>
+  <link href="css/애완견종류.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  nav ul{
+    /* list-style-position: inside; */
+    text-align: center;
+    list-style-type: none;
+    /* 기본값은 아웃사이드 */
+  }
+  figure{
+    text-align: center;
+  }
+  img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow:  1px 1px 5px 3px #000;
+  margin:  20px;
+  opacity: 1;
+  }
+  img:hover{
+    opacity: 0.5;
+  }
+  footer{
+    background-color: #000;
+    color: #fff;
+    padding:10px;
+    text-align: center;
+  }
+  footer p{
+    margin-top:0;
+    }
+  .fixed{
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 70px;
+    position: fixed;
+    bottom:50px;
+    right:100px;
+  }
+  .fixed p{
+    margin:0;
+  }
+  .hid{
+    /* visibility: hidden; */
+    /* display: none; */
+    /* display는 아예 사라지게함 */
+    opacity: 0.5;
+    /* 1을 하면 보이는거와 같음, 0.5 불투명, 0은 안보임 */
+
+  }
+  .hid:hover{
+    opacity: 1;
+  }
+  /* hover란 '마우스를 올렸을 때'의 효과 */
+  #act:target,
+  #soon:target,
+  #sanap:target{
+    background-color: aquamarine;
+  }
+</style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">😊애완견종류</a></li>
+          <li><a href="">😊강아지용품</a></li>
+          <li><a href="">😒건강돌보기</a></li>
+          <li><a href="">👀더불어살기</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 id="top">애완견종류</h1>
+        <ul>
+          <li><a href="#act">활달한 강아지</a></li>
+          <li><a href="#soon">온순한 강아지</a></li>
+          <li><a href="#sanap">사납지만 복종적인 강아지</a></li>
+       </ul>
+       <article>
+        <h3 id="act"><i class="fa-solid fa-house"></i>활달한강아지</h3>
+        <dl>
+          <dt>요크셔테리어</dt>
+          <dd>생기있고 활달한 성질을~</dd>
+          <dt>말티즈</dt>
+          <dd>애정이~</dd>
+          <dt>포메라이언</dt>
+          <dd>활기차고~</dd>
+          <dt>골든리트리버</dt>
+          <dd>이 견종은~</dd>
+        </dl>
+       </article>
+       <figure>
+        <img src="img/강아지.jpg" alt="강아지">
+        <img src="img/강아지2.jpg" alt="강아지2" class="hid">
+        <img src="img/강아지3.jpg" alt="강아지3">
+        <img src="img/강아지4.jpg" alt="강아지4">
+        <figcaption>활달한강아지들</figcaption>
+       </figure>
+       <a href="#top">처음으로</a>
+       <article>
+        <h3 id="soon">온순한강아지</h3> 
+        <dl>
+          <dt>쉬즈</dt>
+          <dd>얼굴에서</dd>
+          <dt>퍼그</dt>
+          <dd>매우</dd>
+          <dt>레드라도 리트리버</dt>
+          <dd>침착</dd>
+        </dl>
+       </article>
+       <figure>
+        <img src="img/강아지.jpg" alt="강아지">
+        <img src="img/강아지2.jpg" alt="강아지2">
+        <img src="img/강아지3.jpg" alt="강아지3">
+        <img src="img/강아지4.jpg" alt="강아지4">
+        <figcaption>온순한강아지</figcaption>
+        </figure>
+        <a href="#top">처음으로</a>
+       <article>
+        <h3 id="sanap"><i class="fa-solid fa-headphones fa-bounce"></i>사납지만 복종적인 강아지</h3>
+        <dl>
+          <dt>미니어쳐핀셔</dt>
+          <dd>경계심이</dd>
+          <dt>푸들</dt>
+          <dd>사납진않으나</dd>
+          <dt>폭스테리어</dt>
+          <dd>가정에서</dd>
+        </dl>
+       </article>
+       <figure>
+        <img src="img/강아지.jpg" alt="강아지">
+        <img src="img/강아지2.jpg" alt="강아지2">
+        <img src="img/강아지3.jpg" alt="강아지3">
+        <img src="img/강아지4.jpg" alt="강아지4">
+        <figcaption>사납지만 복종적인 강아지</figcaption>
+       </figure>
+       <a href="#top">처음으로</a>
+      </section>
+    </main>
+    <aside>
+      <h3>건강한 강아지는</h3>
+      <ul>
+        <li>코가 </li>
+        <li>털에</li>
+        <li>입에서</li>
+        <li>가장</li>
+        <li>강아지들 중</li>
+      </ul>
+    </aside>
+    <footer>
+      <p>copyright namycom</p>
+      <address>대구 중구 예담직업전문학교</address>
+    </footer>
+    <div class="fixed">
+      <p><a href="#menu">top</a></p>
+    </div>
+  </div>
+</body>
+</html>

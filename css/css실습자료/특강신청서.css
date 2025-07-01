@@ -1,0 +1,18 @@
+#container{
+  width: 500px;
+  margin: 0 auto;
+}
+fieldset{
+  text-align: center;
+  float: left;
+  
+}
+li{
+  list-style: none;
+}
+#button{
+  text-align: center;
+}
+button{
+  cursor: pointer;
+}

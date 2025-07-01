@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주문서만들기</title>
+  <link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+  <div id="container">
+    <section>
+      <h1>상품주문서</h1>
+      <form>
+        <fieldset>
+          <legend>개인정보</legend>
+          <ul>
+            <li>
+              <label for="name">이름</label>
+              <input for="text" id="name" name="name" placeholder="여백없이 입력">
+            </li>
+            <li>
+              <label for="tel">연락처</label>
+              <input for="tel" id="phone" name="phone" placeholder="연락가능한 번호">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>배송지 정보</legend>
+          <ul>
+            <li>
+              <label for="adress">주소</label>
+              <input for="adress" id="adress" name="adress">
+            </li>
+            <li>
+              <label for="tel">전화번호</label>
+              <input for="tel" id="call" name="call">
+            </li>
+            <li>
+              <label for="memo">메모</label>
+              <textarea cols="30" rows="5"></textarea>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+       <legend >주문정보</legend>
+          <ul>
+            <li>
+            <label><input type="checkbox" name="fresh" value="fr">경북성주 참외(5kg)</label>
+            </li>  
+          <li>
+            <input type="checkbox" name="gr" value="gr">경북영천 포도(5kg)</label>
+            <label for="number"></label>
+          </li>            
+          <li>
+            <label><input type="checkbox" name="wm" value="wm">경북봉화 수박(5kg)</label>
+          </li>
+          </ul>
+        </fieldset>
+      </form>
+    </section>
+
+  </div>
+</body>
+</html>

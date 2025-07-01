@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //repeat-1.html
+    // for(let i=0; i<=5; i++){    //이 행 자주 씀, 외울 것
+    // console.log(i,'나얼')
+    // }
+    let sum =0;
+    let num = prompt();
+    //1~10까지
+      //  let i=1;
+      // for(;i<=0;)
+
+    for(let i=1;i<=num;i++){
+      sum += i;
+    }
+    console.log(sum);
+
+    //중첩 반복문
+    // 구구단을 맹그러보자구!
+
+    for(let i = 2; i <= 9; i++){
+      console.log(`\t --------------- ${i}단--------------`);
+      for(let j=1; j <=9; j++){
+        console.log(`${i} * ${j} = ${(i*j)}`);
+      }
+      // `${ }`   => 바로 출력하기 위한 개지랄  `=백팁이라 부른다
+      // 안에 있는 for문은 바깥에 있는 for문 만큼 반복한다.
+
+    }
+  </script>
+  
+</body>
+</html>

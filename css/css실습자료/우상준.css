@@ -1,0 +1,114 @@
+*{
+  box-sizing: border-box;
+  font-family: "맑은 고딕", 굴림, 돋움;
+}
+#container{
+  border-style: none;
+  width:1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+header{
+  text-align: center;
+}
+nav{
+  overflow: hidden;
+  background-color: black;
+  /* height:50px; */
+  text-align: left;
+  color: white;
+}
+nav ul{
+   padding: 0;
+   margin: 0; 
+  list-style: none;
+}
+nav li{
+  float: left;
+}
+/* .right{ */
+  float: right;
+/* } */
+/* nav안에 있는 메뉴를 옆으로 해주기 위함 */
+nav li:last-child{
+  float: right;
+}
+nav li:nth-child(2n){
+  background-color: navy;
+}
+nav li:nth-child(2n+1){
+  background-color: #f0f;
+}
+nav a{
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+nav a:hover{
+  background-color: yellow;
+  color:black;
+}
+/* 메뉴안에 파란글씨를 희게 바꾸고 아랫줄제거 */
+aside{
+  float: left;
+  width: 200px;
+  height: 500px;
+  background-color: #ccc;
+  text-align: center;
+}
+section{
+  float:left;
+  text-align: center;
+  width: 600px;
+  height: 500px;
+  padding: 20px;
+}
+footer{
+  clear: both;
+  /* /* 자기자리 찾아가는 것 */
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(20, 212, 212);
+  height: 100px;
+}
+form{
+  width: 500px;
+  background-color: #ddd;
+  margin:0 auto;
+  padding: 5px;
+  }
+form fieldset{
+  border: none;
+}
+form legend{
+  font-weight: bold;
+}
+form ul{
+  padding:0;
+}
+form li{
+  border-radius: 5px;
+  background:rgba(255, 255, 255, 0.5);
+  border: : 1px solid #fff;
+  list-style: none;
+  padding:5px;
+  margin-bottom: 5px;
+}
+form label{
+  width: 130px;
+  display: inline-block;
+}
+form input{
+  width:250px;
+  padding: 3px;
+}
+button{
+  width: 150px;
+  border: none;
+  border-radius: 30px;
+  background-color: #fef;
+  padding: 15px;
+  cursor: pointer;
+}
+
