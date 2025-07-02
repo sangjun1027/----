@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성적평균switch문</title>
+</head>
+<body>
+  <script>
+
+      //값이 입력되었으면 홀수면 홀수, 짝수는 짝수
+ 
+       //국어, 영어, 수학 점수 입력 받아서 평균, 평가 출력
+       //점수입력 -> 3개 저장
+       let kor = Number(prompt('국어점수 입력(0~100)'));
+       let eng = Number(prompt('영어점수 입력(0~100)'));
+       let math = Number(prompt('수학점수 입력(0~100)'));
+ 
+       // 평균 = (국어점수 + 영어 + 수학) / 과목수
+       let avg = parseInt((kor + eng + math) / 3);
+       // 평가 => 평균에 따라 수, 우, 미, 양, 가
+       let grade;   //평가저장
+       if (avg >= 90) {
+         grade = '수';
+       } else if (avg >= 80) {
+         grade = '우';8
+       } else if (avg >= 70) {
+         grade = '미';
+       } else if (avg >= 60) {
+         grade = '양';
+       } else {
+         grade = '가'
+       }
+       // 결과 => 콘솔창에 출력 91점 -> 수
+       console.log(avg + '점 -> ' + grade)  
+
+       //switch문 : 조건이 여러개 일 때, if문 대신 사용
+       switch(parseInt(avg / 10)){   //소수점 안나오게하려고 parsInt
+        case 10 :
+        case 9 : grade = '수'; break;
+        case 8 : grade = '우'; break;
+        case 7 : grade = '미'; break;
+        case 6 : grade = '양'; break;
+        default : grade = '가';
+       }
+       // break를 안걸면 계속 아래로 진행 !
+       console.log(avg + '점 -> ' + grade);
+   </script>
+
+
+  
+</body>
+</html>

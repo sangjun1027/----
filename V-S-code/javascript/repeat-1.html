@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100px;
+      background-color: aqua;
+      margin: 10px;
+      padding: 10px 30px 20px 30px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    //repeat-1.html
+    // for(let i=0; i<=5; i++){    //이 행 자주 씀, 외울 것
+    // console.log(i,'나얼')
+    // }
+    let sum =0;
+    let num = prompt();
+    //1~10까지
+      //  let i=1;
+      // for(i<=0;)
+
+    for(let i=1;i<=num;i++){
+      sum += i;
+    }
+    console.log(sum);
+
+    //중첩 반복문
+    // 구구단을 맹그러보자구!
+
+    for(let i = 2; i <= 13; i++){
+      // console.log(`\t --------------- ${i}단--------------`);
+      // 웹페이지출력
+      // 1단을 하나의 division만듬
+      document.write(`<div><h3> =${i}단=</h3>`);
+      for(let j=1; j <=13; j++){
+        //console.log(`${i} * ${j} = ${(i*j)}`);
+        document.write(`${i} x ${j} = ${i*j}<br>`)
+      }
+      document.write('</div>');
+      // `${ }`   => 바로 출력하기 위한 개지랄  `=백팁이라 부른다
+      // 안에 있는 for문은 바깥에 있는 for문 만큼 반복한다.
+      }
+
+
+      // 변수활용
+      let gugudan = "";
+        for(let i = 2; i <= 5; i++){
+          gugudan += `<div><h3>==${i}단==</h3>`;
+          for(let j=1; j <=9; j++){
+            gugudan += `${i} x ${j} = ${ i * j }<br>`;
+          }
+        gugfudan += `</div>`
+      }
+      console.log(gugudan);
+  </script>
+  
+</body>
+</html>

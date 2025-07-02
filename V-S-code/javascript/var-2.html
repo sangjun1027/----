@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상수 사용하기</title>
+</head>
+<body>
+  <script>
+    // 삼각형 너비를 계산하는 프로그램
+    // 원의 면적을 구하는 프로그램 PI* R * R
+    // 변수선언, 키워드 let 기억할 것 !
+    let radius;      //반지름
+    let PI = 3.14;   // const는 불변 
+                     //결과
+
+    let width;      //너비
+    let height;     //높이
+    let area = 0;   //면적
+    //  반지름 입력 (prompt) / 따옴표 없으면 변수로 인식
+    radius = prompt('반지름을 입력하세요');
+    // 계산
+    area = PI * radius * radius
+    // 결과출력 , console.log 외워랍!!!
+    console.log(area)
+  </script>
+</body>
+</html>
