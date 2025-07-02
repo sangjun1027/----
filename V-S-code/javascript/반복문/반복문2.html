@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>   
+</head>
+<body>
+  <h3>반복문</h3>
+  <script>
+    //별찍기
+    for(let i = 1 ; i <=5 ; i++){
+      let stars = '';
+      for(let j = 1 ; j <= i ; j++){    //별을 모아서 찍어줘야되기에 문자type을 넣을 것
+        stars += '*' ;
+      }
+      console.log(stars);
+    }
+
+    //별찍기2
+    //줄수 : 5까지
+    for (let i = 1 ; i <= 5; i++){
+      //빈칸 수 : 5-i까지
+      let stars = ' ';
+      for (let j = 1 ; j <= 5 - i ; j++){
+        stars += ' ';
+      }
+      //별 수 : i 까지
+      for (let k = 1; k <= i; k++){
+        stars += '*';
+      }
+      console.log(stars);
+    }
+    </script>
+  
+</body>
+</html>
