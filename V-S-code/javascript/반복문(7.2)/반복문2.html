@@ -17,20 +17,21 @@
       console.log(stars);
     }
 
-    //별찍기2
+    //별찍기2 유인물 도전!문제8번 
     //줄수 : 5까지
+    //빈칸 수 : 5-i까지
+    //별 수 : i 까지
+    let stars = '';
     for (let i = 1 ; i <= 5; i++){
-      //빈칸 수 : 5-i까지
-      let stars = ' ';
       for (let j = 1 ; j <= 5 - i ; j++){
         stars += ' ';
       }
-      //별 수 : i 까지
       for (let k = 1; k <= i; k++){
         stars += '*';
       }
+      stars += '\n';
+     }
       console.log(stars);
-    }
     </script>
   
 </body>
