@@ -44,8 +44,13 @@
 
       console.log(`${name} \t${total} \t${avg} \t\t${grade}`);
       
-      document.write(`<tr><td>${name}</td><td>${total}</td><td>${avg}</td><td>${grade}</td></tr>`);
-        
+      document.write(`
+      <tr>
+        <td>${name}</td>
+        <td>${total}</td>
+        <td>${avg}</td>
+        <td>${grade}</td>
+      </tr>`);
     }
           
     // 필드명 출력(콘솔창)
@@ -56,11 +61,16 @@
         <td>총점</td>
         <td>평균</td>
         <td>등급</td>
-      </tr>`
-
-    );
+      </tr>`);
+      
     // 성적자료 넘김 (함수호출)
-
+      document.write(`<table>)
+        <tr>
+          <td>이름</td>
+          <td>총점</td>
+          <td>평균</td>
+          <td>등급</td>
+        <tr>`)
     sungjuk('aaa', 80, 75, 90);
     sungjuk('bbb', 90, 88, 99);
     sungjuk('ccc', 100, 85, 94);
