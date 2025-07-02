@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제7</title>
+  <style>
+    table{
+      background-color: #ddd;
+      padding: 10px;
+      /*border-collapse: collapse;*/
+    }
+    td{
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    //줄수 -> 사람수 / 한줄수 -> 나머지X 완료 / 나머지 1 1줄더
+    //의자번호가 있어야한다
+    //전체 배치도를 저장해놨다가 출력 / 전체배치도 변수가 있어야함
+    
+    //자리배치도
+    //사람수 : personNum
+    //한줄 사람수 : colNum 
+    //몇 줄수 : rowNum 
+    //의자번호 : seatNum
+    //배치도 : layout
+
+    let personNum = prompt('관객 수를 입력하세요');
+    let colNum = prompt('한 줄에 앉을 사람 수를 입력하세요');
+    let rowNum = parseInt(personNum / colNum);
+    rowNum = personNum % colNum == 0 ? rowNum : ++ rowNum;    //삼항연산자 사용
+    // if(personNum % colNum ! = 0){
+    //    rowNum ++;}     //삼항연산자를 안쓸 경우
+    let seatNum = 0;    //count로 쓰는건 다 0 으로 시작
+    let layout = `<table>
+      <caption> 자리배치도 </caption>`;
+    for(let i = 1; i <= rowNum; i ++){    //tr
+      layout += '<tr>'
+      for(let j = 1; j <= colNum; j++){   //td
+        seatNum++; 
+        layout += `<td>좌석${seatNum}</td>`;
+      if(personNum <= seatNum){   //사람수보다 시트수가 크거나 같으면은 빠져나감
+        break;
+        }   
+      }
+      layout += '</tr>';
+    }
+
+    layout += '</table>';
+    document.write(layout);                                                       
+
+
+    // min에서 max까지 홀수합과 짝수합을 구하기
+    let min = Number(prompt('최소값'));
+    let max = Number(prompt('최대값'));
+    let hol = 0;
+    let jjak = 0;
+      for(let i = min ; i <= max; i ++ ){
+        if( i % 2 == 0){
+          jjak += i;
+        }else{
+        hol += i;
+        }  
+        
+      }
+    console.log('홀의 합은'+ hol + ',짝의 합은' + jjak)
+       
+
+  </script>
+</body>
+</html>

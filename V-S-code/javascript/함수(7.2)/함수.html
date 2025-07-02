@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+</head>
+<body>
+  <script>
+    //전역 변수 선언
+    a = a + 3 ;   // 선언 전에 사용 가능 : 호이스팅
+    var a;
+    // b = b + 3 ;
+    let b;    // 선언 전에 사용 불가능
+
+    var a;    //재선언 가능
+    var c = a + 3;
+    let letc = b + 3;
+    // let b; -> let은 재선언 불가
+    console.log(c);
+    console.log(letc);
+
+    let hap = 777;
+    //함수 선언
+    function sum(min, max){   //min, max가 매개변수
+      let hap = 0;    //지역변수
+      //자기가 활동하는 범위, 영역을 스코프 라고 한다.
+      // scope는 내가 선언한 변수가 어디까지 작용되고있는지 파악가능 -> 디버깅 작업
+      for(let i = min; i <= max; i ++){
+        hap += i;
+      }
+      return hap;
+    }
+
+    //함수 실행
+    console.log(sum(1,10));
+    console.log(sum(1,100));
+    console.log(sum(1,1000));
+    console.log(hap);  //함수가 실행되고 나면 retun값은 사라진다
+
+
+    //콜백함수
+    function order(coffee, callback){    //매개변수 자리에 함수가 들어옴
+      console.log(`${coffee} 주문접수`);
+      setTimeout(function(){
+        callback(coffee);
+      }, 3000)
+    }
+
+    function done(coffee){
+      console.log(`${coffee} 준비완료`);
+    }
+
+    order('아메리카노',done);
+    order('라떼',done);
+    order('팥빙수',done);
+
+
+    // 배열의 합
+    let nums = [10, 20, 30, 40, 50];        //배열의 이름은 여러개이기에 끝에 '-s'를 붙이는게 좋음
+    let nums2 = [];
+    // num2에 1~100까지의 무작위 수 5개를 저장하고
+    // start ~ end 까지의 무작위 수 5개 저장
+    // 합을 구하세요
+    let start = 20;
+    let end = 60;
+    for(let i = 0; i < 5; i ++){    //i변수는 배열의 방번호
+      nums2[i] = parseInt(Math.random() * (end - start + 1) + start);    //Math.random -> 랜덤수 생성
+    }
+    console.log(nums2);
+    console.log(`nums2의 합= ${arrhap(...nums2)}`);
+    console.log(`nums2의 최대값 = ${maxFunc(...nums2)}`);
+    console.log(`nums2의 최소값 = ${minFunc(...nums2)}`);
+    console.log(nums);
+    console.log(`배열의 합 = ${arrhap(...nums)}`);
+    //함수 선언
+    function arrhap(a, b, ...arr){    // {}는 블럭 잡을 때 사용, () 데이터 또는 값을 넣을 때 혹은 함수
+      let arrSum = 0;
+      for(let i = 0; i < arr.length; i ++){
+        arrSum += arr[i];
+      }        
+      return arrSum;           
+    }
+
+    // 최대값 계산 함수 : maxFunc
+    function maxFunc(...arr){     //기본적인 함수모양, arr를 받자
+      let max = arr[0];
+      for(let i = 1; i < arr.length; i ++){
+        if(max < arr[i]){
+          max = arr[i];
+        }
+      }
+      return max;
+    }
+
+    // 최소값 계산 함수 : minFunc
+    function minFunc(...arr){
+      let min = arr[0];
+      for(let i = 1; i > arr.length; i++){
+        if(min > arr[i]){
+          min = arr[i];
+        }
+      }
+      return min;
+    }
+   </script>
+  
+  
+</body>
+</html>
