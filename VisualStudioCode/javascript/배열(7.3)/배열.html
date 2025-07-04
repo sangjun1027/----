@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>자바</h1>
+  <h1>자바스크립트</h1>
+  <h1>노더</h1>
+  <h1>뷰</h1>
+<script>
+  let subject = document.querySelector('h1')
+  console.log(subject[0])
+  console.log(subject[1])
+  console.log(subject[2])
+  console.log(subject[3])
+
+  let score = [90, 100, 40, 100];
+
+  // 배열순항
+  console.log(score);
+  for(let i = 0; i < score.length; i ++){
+
+    console.log(`index : ${i} => element ${score[i]}`);
+  }
+
+  // for in => index
+  for (let idx in score){
+    console.log(`index : ${idx} => element : ${score[idx]}`);
+  }
+
+  // for of => element(값)
+  for (const ele of score){
+    console.log(ele);
+  }
+
+  // for Each는 for in + for of 합친 것
+  let colors = ['주황', '노랑', '초록'];
+  colors.forEach(function(ele, idx){
+    console.log(`index = $[idx], element = $[ele]`)
+  })
+
+  // 추가
+  console.log(colors);
+  colors.push('파랑');    //추가
+  colors.unshift('빨강')    //앞쪽에 추가
+  colors.pop();   //제거
+  colors. shift();    //앞쪽꺼 제거
+  colors.splice(1, 0, '초록', '파랑', '남색');   //0은 기존에 아무것도 지우지 않고 / 삽입
+  colors.splice(4, 1,);   //4번째에서 1개를 삭제해라 /  1은 삭제개수
+
+  // 배열에 인덱스 확인할 목적(중복체크)
+  if(colors.indexOf('초록') == -1){   //-1이면 없다. 1이면 있다
+    colors.push('초록')   //배열에 초록이 있는지 우선 찾아줘
+  } else {
+    alert('중복된 색입니다');
+  }  
+
+  // map() => 기존의 배열의 요소를 처리해서 새로운 배열생성
+    // console.log(score);
+    // let maparr = score.map(function(ele){
+    //   return parseInt(ele * 1.1);
+    // })
+    // console.log(maparr)
+  // 위의 것을 화살표 함수로
+    console.log(score);
+    let maparr = score.map((ele) => parseInt(ele * 1.1));
+      console.log(maparr);
+  //  조건에 맞는 요소 추출
+  let filterArr = maparr.filter((ele, ind) => ele < 100);
+  console.log(filterArr);
+
+
+  // 배열의 합
+  let arrhap = score.reduce((pre, curr) => pre + curr );    
+  console.log(arrhap);
+
+ 
+  console.log(arrhap);
+
+    
+  // data의 정렬
+  console.log(colors.sort());   //오름차순
+  console.log(colors.sort().reverse());   //내림차순
+
+  console.log(maparr.sort());   // 앞자리 숫자 크기에 따라
+  console.log(maparr.sort((a, b) => a-b));   //숫자의 크기에 따라 오름차순
+  console.log(maparr.sort((a, b) => b-a));   //내림차순
+
+  
+</script>
+  
+</body>
+</html>

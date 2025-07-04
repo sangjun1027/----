@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+</head>
+<body>
+  <h3>객체(object)</h3>
+  <script>
+    // console.log가 여러개면 undefind가 뜸
+    // 객체
+    let person = {
+      name : '홍길동',
+      age : 25,
+      job : 'programer',
+      eat : function(food){
+        console.log(`${food}먹어요`);
+      }
+    }
+
+    console.log(person.name);    /* person:객체, name: */
+    console.log(person.job)
+    console.log(person.eat('빵'));
+
+    // 추가
+    console.log(person);
+    person.haircolor = '빨강';
+    person.run = function(){    /*메소드추가 */
+      console.log(`${this.name}달린다`)
+    } 
+    console.log(person.run());
+
+    //  삭제
+    delete person.haircolor;
+
+    // 객체만들 때 안에 내용이 똑같다면, 틀을 하나 만들어서 입력값만 바꾸면 됨
+    
+  </script>
+  
+</body>
+</html>

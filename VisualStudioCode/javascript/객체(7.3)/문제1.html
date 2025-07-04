@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // product생성자 함수를 활용해서
+    // 객체를 생성
+    function Product(name, weight, price){    //생성자함수는 대문자!
+      this.name = name,
+      this.weight = weight,
+      this.price = price    //속성을 만드는 과정
+    }
+    Product.prototype.calc = function(w){       //calc는 메서드
+      return w / this.weight * this.price;
+    } 
+    // 객체생성
+    let sam = new Product('삼겹살', 100, 1500);
+    let galbi = new Product('갈비살', 100, 10000);
+    let result = sam.calc(1000);    //reult라는 방안에 저장
+    console.log(`${sam.name}=> ${result}원 입니다`);
+    result = galbi.calc(500);
+    console.log(`${galbi.name}=> ${result}원 입니다`);
+
+  </script>
+  
+</body>
+</html>

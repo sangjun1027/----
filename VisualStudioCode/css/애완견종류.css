@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Jua&display=swap');
+#container{
+      width: 1000px;
+      margin: 0 auto;
+    }
+.jua-regular {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    header{
+      background-color: beige;
+    }
+    nav li{
+      display: inline-block;
+      padding: 5px 10px 5px 5px;
+      margin: 10px 0;
+      border-bottom: 3px solid #ccc;
+      border-radius: 10px;
+    }
+
+    nav li:hover{
+      border-color: #f00;
+    }
+
+    a{
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:visited{
+      color: #000;
+    }
+    section{
+      background-color: #ddd;
+      padding: 10px;
+    }
+    section ul{
+      text-align: center;
+      padding: 0;
+    }
+    section li{
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+    }
+    section a{
+      display: block;
+      text-align: right;
+      margin-right: 20px;
+    }
+    article{
+      border: 1px solid #aaa;
+      padding: 16px;
+      /* background-color:rgba(255,255,255,0.5); */
+      background-color: rgba(0,0,0,0.1);
+      font-family: "Dongle", sans-serif;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+    figure{
+      text-align: center;
+    }
+    img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 1px 1px 10px 3px #000;
+      margin: 20px;
+      opacity: 1;
+    }
+    img:hover{
+      opacity: 0.5;
+    }
+    .hid{
+      /* visibility: hidden; */
+      /* display: none; */
+      opacity: 0.5;
+
+    }
+    .hid:hover{
+      opacity: 1;
+    }
+    aside{
+      background-color: pink;
+      padding: 10px;
+    }
+    aside li{
+      line-height: 1.5;
+    }
+    footer{
+      background-color: black;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    footer p{
+      margin-top: 0;
+    }
+    .fixed{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: aquamarine;
+      text-align: center;
+      line-height: 70px;
+      position: fixed;
+      bottom: 30px;
+      right: 50px;
+    }
+    .fixed p{
+      margin: 0;
+    }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트</title>
+  <style>
+    img{
+      width: 300px;
+    }
+    button{
+      display: block;
+    }
+    #desc{
+      width: 300px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h3>상세설명 보기/닫기</h3>
+  <img src="원영.jpg" alt="레드향">
+  <button type="button" id="open">상세설명보기</button>
+  <div id="desc">
+    <h3>레드향</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Corporis, architecto cum eveniet, 
+      sit illo impedit doloremque praesentium perferendis ducimus 
+      vero itaque quod asperiores? Corporis animi, 
+      ex ea cupiditate ipsa dolorem!</p>
+    <button type="button" id="close">상세설명닫기</button>
+  </div>
+    <script>
+      let showBtn = document.querySelector('#open')
+      let closeBtn = document.querySelector('#close')
+      let desc = document.querySelector('#desc')
+
+      showBtn.onclick = show;
+      closeBtn.onclick = closef;
+
+      function show(){
+        desc.style.display = 'block';
+        showBtn.style.display = 'none';
+
+        // document.querySelector('#desc').style.display = 'block';
+        // document.querySelector('#open').style.display = 'none';
+      }
+      function closef(){
+        desc.style.display = 'none';
+        showBtn.style.display = 'block';
+        // document.querySelectorAll('#desc').style.display = 'none'
+        // document.querySelectorAll('#open').style.display = 'block'
+      }
+    </script>
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1번 배열문제</title>
+</head>
+<body>
+    <h3>배열</h3>
+    <script>
+        // 배열 1~10사이에 무작위수 10개 입력
+        let arr = [];
+        for(let i = 0; i < 10; i ++){
+            arr[i] = parseInt(Math.random()*100 + 1);
+        }
+        console.log(arr);
+
+        // 배열의 합 계산
+        let sum = 0;
+        let max = 0;
+        let min = 100;
+        for(let ele of arr){
+             sum += ele;
+             
+             // 최대값과 최소값 구하기
+             if(max < ele) max = ele;
+             if(min > ele) min = ele;
+        }
+        console.log(`최대값 ${max}\n최소값 ${min}\n합 ${sum}`);
+        console.log(arr.reduce((a,b) => a + b));
+    </script>
+    
+</body>
+</html>
